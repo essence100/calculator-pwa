@@ -1,56 +1,82 @@
-/* ================================
+/* ========================================
    RESET
-================================ */
+======================================== */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 
-/* ================================
+/* ========================================
    ROOT VARIABLES
-================================ */
+======================================== */
 
 :root {
-    --bg: #0b0d12;
-    --calculator-bg: #11141b;
-    --display-bg: #171a22;
 
-    --text: #ffffff;
-    --secondary-text: #8d94a5;
+    --bg-color: #0f1117;
 
-    --button-bg: #20242e;
-    --button-hover: #2b303c;
+    --calculator-bg: #171a23;
 
-    --function-bg: #303641;
-    --operator-bg: #252b36;
+    --display-bg: #090b10;
 
-    --scientific-bg: #1b2029;
+    --panel-bg: #1d212c;
 
-    --accent: #5b8cff;
-    --accent-hover: #4b7df0;
+    --button-bg: #252a36;
 
-    --equals-bg: #5b8cff;
-    --equals-hover: #4b7df0;
+    --button-hover: #303746;
 
-    --border: #292e39;
+    --text-color: #ffffff;
+
+    --muted-text: #9ca3af;
+
+    --border-color: #303746;
+
+    --operator-color: #2563eb;
+
+    --operator-hover: #1d4ed8;
+
+    --equals-color: #16a34a;
+
+    --equals-hover: #15803d;
+
+    --function-color: #374151;
+
+    --scientific-color: #202531;
+
+    --danger-color: #dc2626;
+
+    --shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 
-/* ================================
+/* ========================================
    BODY
-================================ */
+======================================== */
 
 body {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1d2330 0%,
+            #0f1117 50%,
+            #080a0f 100%
+        );
+
+    color: var(--text-color);
 
     font-family:
         Inter,
@@ -60,144 +86,316 @@ body {
         "Segoe UI",
         sans-serif;
 
-    background:
-        radial-gradient(
-            circle at top,
-            #171b25 0%,
-            #0b0d12 55%
-        );
-
-    color: var(--text);
-
     transition:
         background 0.3s ease,
         color 0.3s ease;
 }
 
 
-/* ================================
+/* ========================================
    CALCULATOR
-================================ */
+======================================== */
 
 .calculator {
+
     width: 100%;
+
     max-width: 420px;
 
     padding: 18px;
 
-    border-radius: 24px;
-
     background: var(--calculator-bg);
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
 
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.45);
+    border-radius: 24px;
 
-    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 
-/* ================================
+/* ========================================
    HEADER
-================================ */
+======================================== */
 
 .calculator-header {
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
 
-    margin-bottom: 15px;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
 }
 
 .calculator-header h1 {
+
     font-size: 20px;
+
     font-weight: 700;
+
+    letter-spacing: 0.3px;
 }
 
 .theme-btn {
-    width: 40px;
-    height: 40px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     border: none;
-    border-radius: 12px;
+
+    border-radius: 50%;
 
     background: var(--button-bg);
-    color: var(--text);
 
-    font-size: 18px;
+    color: var(--text-color);
+
+    font-size: 17px;
 
     cursor: pointer;
 
-    transition: 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .theme-btn:hover {
+
     background: var(--button-hover);
+
+    transform: rotate(10deg);
 }
 
 
-/* ================================
+/* ========================================
    DISPLAY
-================================ */
+======================================== */
 
 .display {
-    min-height: 125px;
+
+    position: relative;
+
+    min-height: 145px;
 
     display: flex;
-    flex-direction: column;
+
+    align-items: flex-end;
+
     justify-content: flex-end;
 
-    padding: 20px;
-
     margin-bottom: 14px;
+
+    padding: 22px;
+
+    overflow: hidden;
 
     border-radius: 18px;
 
     background: var(--display-bg);
 
-    overflow: hidden;
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
 }
 
-.history-display {
-    min-height: 25px;
+
+/* ========================================
+   DISPLAY BACKGROUND
+======================================== */
+
+.display-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("backgrounds/abstract-1.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 0.25;
+
+    transform: scale(1);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.8s ease,
+        background-image 0.4s ease;
+
+    z-index: 0;
+}
+
+
+/* ========================================
+   DISPLAY OVERLAY
+======================================== */
+
+.display-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.42);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transition:
+        background 0.3s ease;
+}
+
+
+/* ========================================
+   DISPLAY CONTENT
+======================================== */
+
+.display-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
 
     text-align: right;
+}
 
-    color: var(--secondary-text);
+
+/* ========================================
+   DISPLAY TEXT
+======================================== */
+
+.history-display {
+
+    min-height: 24px;
+
+    margin-bottom: 6px;
+
+    color: var(--muted-text);
 
     font-size: 14px;
 
+    white-space: nowrap;
+
     overflow: hidden;
 
-    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .current-display {
-    margin-top: 8px;
 
-    text-align: right;
+    width: 100%;
 
-    font-size: clamp(32px, 9vw, 48px);
+    color: var(--text-color);
 
-    font-weight: 600;
+    font-size: clamp(34px, 9vw, 52px);
+
+    font-weight: 700;
 
     line-height: 1.1;
 
-    overflow: hidden;
-
     white-space: nowrap;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.current-display::-webkit-scrollbar {
+
+    display: none;
 }
 
 
-/* ================================
+/* ========================================
+   TYPING STATE
+======================================== */
+
+.display.is-typing .display-background {
+
+    opacity: 0.10;
+}
+
+
+/* ========================================
+   CALCULATION ANIMATION
+======================================== */
+
+.display.calculation-complete
+.display-background {
+
+    animation:
+        displayBackgroundPulse
+        0.8s ease;
+}
+
+@keyframes displayBackgroundPulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.035);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+}
+
+
+/* ========================================
+   BACKGROUND DISABLED
+======================================== */
+
+.display.background-disabled
+.display-background {
+
+    opacity: 0 !important;
+}
+
+.display.background-disabled
+.display-overlay {
+
+    background: transparent;
+}
+
+
+/* ========================================
    SCIENTIFIC BUTTONS
-================================ */
+======================================== */
 
 .scientific-buttons {
+
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
     gap: 8px;
 
@@ -205,89 +403,92 @@ body {
 }
 
 
-/* ================================
+/* ========================================
    MAIN BUTTONS
-================================ */
+======================================== */
 
 .buttons {
+
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    gap: 9px;
+    gap: 8px;
 }
 
 
-/* ================================
-   BUTTON BASE
-================================ */
+/* ========================================
+   GENERAL BUTTON
+======================================== */
 
 .btn {
-    min-height: 60px;
+
+    min-height: 58px;
 
     border: none;
-    border-radius: 15px;
 
-    background: var(--button-bg);
+    border-radius: 14px;
 
-    color: var(--text);
+    color: var(--text-color);
 
-    font-size: 19px;
-    font-weight: 600;
+    font-size: 18px;
+
+    font-weight: 650;
 
     cursor: pointer;
 
     user-select: none;
 
-    transition:
-        transform 0.1s ease,
-        background 0.2s ease;
-}
+    -webkit-tap-highlight-color: transparent;
 
-.btn:hover {
-    background: var(--button-hover);
+    transition:
+        transform 0.08s ease,
+        background 0.18s ease;
 }
 
 .btn:active {
-    transform: scale(0.94);
+
+    transform: scale(0.96);
 }
 
 
-/* ================================
-   SCIENTIFIC
-================================ */
+/* ========================================
+   NUMBER BUTTONS
+======================================== */
 
-.btn.scientific {
-    min-height: 45px;
+.number {
 
-    background: var(--scientific-bg);
-
-    color: #cbd1dd;
-
-    font-size: 14px;
+    background: var(--button-bg);
 }
 
-.btn.scientific:hover {
+.number:hover {
+
     background: var(--button-hover);
 }
 
 
-/* ================================
-   FUNCTION
-================================ */
+/* ========================================
+   FUNCTION BUTTONS
+======================================== */
 
-.btn.function {
-    background: var(--function-bg);
+.function {
 
-    color: #e1e5ec;
+    background: var(--function-color);
+}
+
+.function:hover {
+
+    background: #4b5563;
 }
 
 
-/* ================================
-   DELETE
-================================ */
+/* ========================================
+   DELETE BUTTON
+======================================== */
 
 .delete-btn {
+
     font-size: 15px !important;
 
     font-weight: 800;
@@ -296,142 +497,174 @@ body {
 }
 
 
-/* ================================
-   OPERATORS
-================================ */
+/* ========================================
+   SCIENTIFIC BUTTONS
+======================================== */
 
-.btn.operator {
-    background: var(--operator-bg);
+.scientific {
 
-    color: #8fb0ff;
+    min-height: 46px;
 
-    font-size: 24px;
+    background: var(--scientific-color);
+
+    font-size: 14px;
 }
 
-.btn.operator:hover {
+.scientific:hover {
+
     background: var(--button-hover);
 }
 
 
-/* ================================
-   ZERO
-================================ */
+/* ========================================
+   OPERATORS
+======================================== */
 
-.btn.zero {
-    grid-column: span 2;
+.operator {
+
+    background:
+        var(--operator-color);
+}
+
+.operator:hover {
+
+    background:
+        var(--operator-hover);
 }
 
 
-/* ================================
+/* ========================================
    EQUALS
-================================ */
+======================================== */
 
-.btn.equals {
-    background: var(--equals-bg);
+.equals {
 
-    color: #ffffff;
+    background:
+        var(--equals-color);
 
-    font-size: 24px;
+    grid-column:
+        span 1;
 }
 
-.btn.equals:hover {
-    background: var(--equals-hover);
+.equals:hover {
+
+    background:
+        var(--equals-hover);
 }
 
 
-/* ================================
-   HISTORY BUTTON
-================================ */
+/* ========================================
+   ZERO
+======================================== */
+
+.zero {
+
+    grid-column:
+        span 2;
+}
+
+
+/* ========================================
+   HISTORY TOGGLE
+======================================== */
 
 .history-toggle {
+
     width: 100%;
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     padding: 13px;
 
-    border: none;
+    border:
+        1px solid
+        var(--border-color);
 
-    border-radius: 13px;
+    border-radius: 12px;
 
-    background: var(--button-bg);
+    background:
+        var(--button-bg);
 
-    color: var(--text);
+    color:
+        var(--text-color);
 
     font-size: 13px;
 
     font-weight: 800;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.7px;
 
     cursor: pointer;
 
-    transition: 0.2s ease;
+    transition:
+        background 0.2s ease;
 }
 
 .history-toggle:hover {
-    background: var(--button-hover);
+
+    background:
+        var(--button-hover);
 }
 
 
-/* ================================
+/* ========================================
    HISTORY PANEL
-================================ */
+======================================== */
 
 .history-panel {
-    margin-top: 15px;
+
+    margin-top: 12px;
 
     padding: 15px;
 
     border-radius: 16px;
 
-    background: var(--display-bg);
+    background:
+        var(--panel-bg);
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border-color);
 }
 
 .history-panel.hidden {
+
     display: none;
 }
 
 
-/* ================================
+/* ========================================
    HISTORY HEADER
-================================ */
+======================================== */
 
 .history-header {
+
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
 
-    gap: 10px;
-
     margin-bottom: 12px;
 }
 
 .history-header h2 {
-    font-size: 15px;
 
-    font-weight: 700;
+    font-size: 15px;
 }
 
-
-/* ================================
-   CLEAR HISTORY
-================================ */
-
 .clear-history {
-    border: none;
 
     padding: 7px 11px;
 
+    border: none;
+
     border-radius: 8px;
 
-    background: var(--button-bg);
+    background:
+        var(--danger-color);
 
-    color: #ff7d7d;
+    color: white;
 
     font-size: 12px;
 
@@ -440,205 +673,558 @@ body {
     cursor: pointer;
 }
 
-.clear-history:hover {
-    background: var(--button-hover);
-}
 
-
-/* ================================
+/* ========================================
    HISTORY LIST
-================================ */
+======================================== */
 
 .history-list {
-    max-height: 230px;
-
-    overflow-y: auto;
 
     display: flex;
 
     flex-direction: column;
 
     gap: 8px;
+
+    max-height: 260px;
+
+    overflow-y: auto;
 }
 
-
-/* ================================
-   HISTORY ITEM
-================================ */
-
 .history-item {
-    padding: 11px 12px;
+
+    padding: 10px 12px;
 
     border-radius: 10px;
 
-    background: var(--button-bg);
+    background:
+        var(--button-bg);
 
-    cursor: pointer;
+    color:
+        var(--text-color);
 
-    transition: 0.2s ease;
+    font-size: 13px;
+
+    line-height: 1.5;
 }
 
-.history-item:hover {
-    background: var(--button-hover);
-}
+.history-empty {
 
-.history-expression {
-    display: block;
-
-    color: var(--secondary-text);
-
-    font-size: 12px;
-
-    margin-bottom: 4px;
-}
-
-.history-result {
-    display: block;
-
-    color: var(--text);
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    text-align: right;
-}
-
-
-/* ================================
-   EMPTY HISTORY
-================================ */
-
-.empty-history {
-    padding: 20px 10px;
+    padding: 14px;
 
     text-align: center;
 
-    color: var(--secondary-text);
+    color:
+        var(--muted-text);
 
     font-size: 13px;
 }
 
 
-/* ================================
-   LIGHT THEME
-================================ */
+/* ========================================
+   DISPLAY BACKGROUND SETTINGS BUTTON
+======================================== */
 
-body.light {
-    --bg: #eef1f7;
-    --calculator-bg: #ffffff;
-    --display-bg: #f2f4f8;
+.background-settings-toggle {
 
-    --text: #171a21;
-    --secondary-text: #737b8c;
+    width: 100%;
 
-    --button-bg: #e8ebf1;
-    --button-hover: #dce0e8;
+    margin-top: 12px;
 
-    --function-bg: #dde2ea;
-    --operator-bg: #e1e6ee;
+    padding: 13px;
 
-    --scientific-bg: #edf0f5;
+    border:
+        1px solid
+        var(--border-color);
 
-    --accent: #4d78e8;
-    --accent-hover: #3e69da;
+    border-radius: 12px;
 
-    --equals-bg: #4d78e8;
-    --equals-hover: #3e69da;
+    background:
+        var(--button-bg);
 
-    --border: #d8dce5;
+    color:
+        var(--text-color);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
 }
 
+.background-settings-toggle:hover {
+
+    background:
+        var(--button-hover);
+}
+
+
+/* ========================================
+   BACKGROUND SETTINGS
+======================================== */
+
+.background-settings {
+
+    margin-top: 12px;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    background:
+        var(--panel-bg);
+
+    border:
+        1px solid
+        var(--border-color);
+}
+
+.background-settings.hidden {
+
+    display: none;
+}
+
+.background-settings-header h2 {
+
+    margin-bottom: 16px;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   SETTING ROW
+======================================== */
+
+.setting-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+
+    color:
+        var(--text-color);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   SETTING SWITCH
+======================================== */
+
+.setting-switch {
+
+    min-width: 58px;
+
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        #555;
+
+    color:
+        white;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.setting-switch.active {
+
+    background:
+        #16a34a;
+}
+
+
+/* ========================================
+   SETTING GROUP
+======================================== */
+
+.setting-group {
+
+    margin-bottom: 18px;
+}
+
+.setting-group h3,
+.setting-group label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--text-color);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   BACKGROUND OPTIONS
+======================================== */
+
+.background-options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.background-option {
+
+    padding: 10px 6px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 10px;
+
+    background:
+        var(--button-bg);
+
+    color:
+        var(--text-color);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border 0.2s ease;
+}
+
+.background-option:hover {
+
+    background:
+        var(--button-hover);
+}
+
+.background-option.active {
+
+    border-color:
+        #16a34a;
+
+    background:
+        #16a34a;
+
+    color:
+        white;
+}
+
+
+/* ========================================
+   OPACITY
+======================================== */
+
+#backgroundOpacity {
+
+    width: 100%;
+
+    accent-color:
+        #16a34a;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   CUSTOM BACKGROUND
+======================================== */
+
+.custom-background-area {
+
+    padding-top: 4px;
+}
+
+.custom-background-area.hidden {
+
+    display: none;
+}
+
+.custom-background-area input {
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 8px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 8px;
+
+    background:
+        var(--button-bg);
+
+    color:
+        var(--text-color);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   LIGHT THEME
+======================================== */
+
 body.light {
+
+    --bg-color: #eef2f7;
+
+    --calculator-bg: #ffffff;
+
+    --display-bg: #f3f4f6;
+
+    --panel-bg: #f8fafc;
+
+    --button-bg: #e5e7eb;
+
+    --button-hover: #d1d5db;
+
+    --text-color: #111827;
+
+    --muted-text: #6b7280;
+
+    --border-color: #d1d5db;
+
     background:
         radial-gradient(
             circle at top,
             #ffffff 0%,
-            #eef1f7 60%
+            #eef2f7 55%,
+            #dfe5ec 100%
         );
 }
 
+body.light
+.display-overlay {
 
-/* ================================
+    background:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+/* ========================================
    SCROLLBAR
-================================ */
+======================================== */
 
 .history-list::-webkit-scrollbar {
-    width: 5px;
+
+    width: 6px;
 }
 
 .history-list::-webkit-scrollbar-thumb {
-    background: #555c6b;
 
     border-radius: 10px;
+
+    background:
+        #4b5563;
 }
 
 
-/* ================================
+/* ========================================
    RESPONSIVE
-================================ */
+======================================== */
 
 @media (max-width: 480px) {
 
     body {
+
         padding: 10px;
     }
 
     .calculator {
+
         padding: 14px;
 
         border-radius: 20px;
     }
 
-    .btn {
-        min-height: 58px;
-
-        border-radius: 13px;
-    }
-
-    .scientific-buttons {
-        gap: 6px;
-    }
-
-    .buttons {
-        gap: 7px;
-    }
-
     .display {
-        min-height: 115px;
 
-        padding: 16px;
+        min-height: 135px;
+
+        padding: 18px;
     }
+
+    .btn {
+
+        min-height: 56px;
+    }
+
 }
 
 
 @media (max-width: 380px) {
 
     .calculator {
+
         padding: 11px;
     }
 
     .btn {
+
         min-height: 52px;
 
-        font-size: 17px;
+        font-size: 16px;
     }
 
-    .btn.operator {
-        font-size: 21px;
+    .scientific {
+
+        min-height: 43px;
+
+        font-size: 13px;
     }
 
-    .btn.equals {
-        font-size: 21px;
+    .current-display {
+
+        font-size: 34px;
     }
 
-    .btn.scientific {
-        min-height: 41px;
+}
 
-        font-size: 12px;
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   CUSTOM BACKGROUND
+================================ */
+
+.custom-background-area {
+    margin-top: 14px;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--panel-bg);
+}
+
+.custom-background-area > label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.custom-background-preview {
+    width: 100%;
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--display-bg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--muted-text);
+    font-size: 12px;
+    text-align: center;
+}
+
+.custom-background-preview.has-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.custom-background-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.custom-image-btn,
+.remove-custom-image-btn {
+    flex: 1;
+    min-height: 42px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background 0.2s ease;
+}
+
+.custom-image-btn {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.remove-custom-image-btn {
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.custom-image-btn:hover,
+.remove-custom-image-btn:hover {
+    opacity: 0.85;
+}
+
+.custom-image-btn:active,
+.remove-custom-image-btn:active {
+    transform: scale(0.97);
+}
+
+.custom-background-help {
+    margin: 9px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--muted-text);
+}
+
+@media (max-width: 380px) {
+
+    .custom-background-actions {
+        flex-direction: column;
     }
 
-    .display {
-        min-height: 105px;
-    }
 }

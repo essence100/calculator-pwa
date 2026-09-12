@@ -1,7 +1,7 @@
 {
     "name": "Calculator PWA",
     "short_name": "Calculator",
-    "description": "A modern scientific calculator that works offline.",
+    "description": "A modern scientific calculator with smart dynamic display backgrounds that works offline.",
     "start_url": "./",
     "scope": "./",
     "display": "standalone",

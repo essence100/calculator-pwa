@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <!-- Basic SEO -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -7,73 +10,38 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     >
 
+    <!-- SEO -->
     <title>Free Online Scientific Calculator | Calculator PWA</title>
 
     <meta
         name="description"
-        content="Use our free online scientific calculator for basic and advanced calculations. Fast, responsive, mobile-friendly and available offline as a PWA."
+        content="A modern free scientific calculator that works online and offline. Fast, responsive and installable as a PWA."
     >
 
     <meta
         name="keywords"
-        content="calculator, online calculator, scientific calculator, free calculator, math calculator, mobile calculator, PWA calculator, offline calculator"
+        content="calculator, scientific calculator, online calculator, free calculator, PWA calculator, offline calculator"
     >
 
     <meta name="author" content="Calculator PWA">
+    <meta name="robots" content="index, follow">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <meta
-        name="googlebot"
-        content="index, follow"
-    >
-
-
-    <!-- Canonical URL -->
-    <link
-        rel="canonical"
-        href="https://yourdomain.com/"
-    >
-
-
-    <!-- Theme / PWA -->
-    <meta
-        name="theme-color"
-        content="#0f1117"
-    >
-
-    <meta
-        name="mobile-web-app-capable"
-        content="yes"
-    >
-
-    <meta
-        name="apple-mobile-web-app-capable"
-        content="yes"
-    >
-
+    <!-- PWA -->
+    <meta name="theme-color" content="#0f1117">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
     >
-
     <meta
         name="apple-mobile-web-app-title"
         content="Calculator"
     >
 
+    <link rel="manifest" href="manifest.json">
 
-    <!-- PWA -->
-    <link
-        rel="manifest"
-        href="manifest.json"
-    >
-
-
-    <!-- Favicon -->
+    <!-- Icons -->
     <link
         rel="icon"
         href="icons/icon-192.png"
@@ -85,81 +53,32 @@
         href="icons/icon-192.png"
     >
 
-
-    <!-- Open Graph / Social SEO -->
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:title"
-        content="Free Online Scientific Calculator"
-    >
-
-    <meta
-        property="og:description"
-        content="A fast, modern and responsive scientific calculator that works online and offline."
-    >
-
-    <meta
-        property="og:url"
-        content="https://yourdomain.com/"
-    >
-
-    <meta
-        property="og:site_name"
-        content="Calculator PWA"
-    >
-
-    <meta
-        property="og:image"
-        content="https://yourdomain.com/icons/icon-512.png"
-    >
-
-
-    <!-- Twitter / X -->
-    <meta
-        name="twitter:card"
-        content="summary"
-    >
-
-    <meta
-        name="twitter:title"
-        content="Free Online Scientific Calculator"
-    >
-
-    <meta
-        name="twitter:description"
-        content="Calculate quickly with our free online scientific calculator."
-    >
-
-    <meta
-        name="twitter:image"
-        content="https://yourdomain.com/icons/icon-512.png"
-    >
-
-
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        href="fontawesome/css/fontawesome.css"
     >
 
-
-    <!-- Main CSS -->
     <link
         rel="stylesheet"
-        href="style.css"
+        href="fontawesome/css/solid.css"
     >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <main class="calculator">
 
-        <!-- Header -->
+        <!-- ========================================
+             HEADER
+        ========================================= -->
+
         <header class="calculator-header">
+
             <h1>Calculator</h1>
 
             <button
@@ -170,28 +89,53 @@
             >
                 <i class="fa-solid fa-sun"></i>
             </button>
+
         </header>
 
 
-        <!-- Display -->
-        <section class="display">
+        <!-- ========================================
+             DISPLAY
+        ========================================= -->
+
+        <section
+            id="calculatorDisplay"
+            class="display"
+        >
 
             <div
-                id="historyDisplay"
-                class="history-display"
+                id="displayBackground"
+                class="display-background"
+                aria-hidden="true"
             ></div>
 
             <div
-                id="currentDisplay"
-                class="current-display"
-            >
-                0
+                class="display-overlay"
+                aria-hidden="true"
+            ></div>
+
+            <div class="display-content">
+
+                <div
+                    id="historyDisplay"
+                    class="history-display"
+                ></div>
+
+                <div
+                    id="currentDisplay"
+                    class="current-display"
+                >
+                    0
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- Scientific Buttons -->
+        <!-- ========================================
+             SCIENTIFIC BUTTONS
+        ========================================= -->
+
         <section class="scientific-buttons">
 
             <button
@@ -261,7 +205,10 @@
         </section>
 
 
-        <!-- Main Calculator Buttons -->
+        <!-- ========================================
+             MAIN CALCULATOR BUTTONS
+        ========================================= -->
+
         <section class="buttons">
 
             <button
@@ -419,7 +366,10 @@
         </section>
 
 
-        <!-- History Button -->
+        <!-- ========================================
+             HISTORY
+        ========================================= -->
+
         <button
             id="historyBtn"
             class="history-toggle"
@@ -429,7 +379,6 @@
         </button>
 
 
-        <!-- History Panel -->
         <section
             id="historyPanel"
             class="history-panel hidden"
@@ -456,10 +405,184 @@
 
         </section>
 
+
+        <!-- ========================================
+             DISPLAY BACKGROUND SETTINGS
+        ========================================= -->
+
+        <button
+            id="backgroundSettingsBtn"
+            class="background-settings-toggle"
+            type="button"
+        >
+            DISPLAY BACKGROUND
+        </button>
+
+
+        <section
+            id="backgroundSettings"
+            class="background-settings hidden"
+        >
+
+            <div class="background-settings-header">
+
+                <h2>Display Background</h2>
+
+            </div>
+
+
+            <!-- ON / OFF -->
+
+            <div class="setting-row">
+
+                <span>Background</span>
+
+                <button
+                    id="backgroundToggle"
+                    class="setting-switch active"
+                    type="button"
+                >
+                    ON
+                </button>
+
+            </div>
+
+
+            <!-- STYLE -->
+
+            <div class="setting-group">
+
+                <h3>Style</h3>
+
+                <div class="background-options">
+
+                    <button
+                        class="background-option active"
+                        data-background="abstract"
+                        type="button"
+                    >
+                        Abstract
+                    </button>
+
+                    <button
+                        class="background-option"
+                        data-background="technology"
+                        type="button"
+                    >
+                        Technology
+                    </button>
+
+                    <button
+                        class="background-option"
+                        data-background="custom"
+                        type="button"
+                    >
+                        Custom
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPACITY -->
+
+            <div class="setting-group">
+
+                <label for="backgroundOpacity">
+                    Opacity
+                </label>
+
+                <input
+                    id="backgroundOpacity"
+                    type="range"
+                    min="10"
+                    max="40"
+                    value="25"
+                >
+
+            </div>
+
+
+            <!-- ANIMATION -->
+
+            <div class="setting-row">
+
+                <span>Animation</span>
+
+                <button
+                    id="backgroundAnimationToggle"
+                    class="setting-switch active"
+                    type="button"
+                >
+                    ON
+                </button>
+
+            </div>
+
+
+            <!-- CUSTOM IMAGE -->
+
+            <div
+                id="customBackgroundArea"
+                class="custom-background-area hidden"
+            >
+
+                <label for="customBackgroundInput">
+                    Custom Image
+                </label>
+
+                <div
+                    id="customBackgroundPreview"
+                    class="custom-background-preview"
+                >
+                    <span>No custom image selected</span>
+                </div>
+
+                <div class="custom-background-actions">
+
+                    <label
+                        for="customBackgroundInput"
+                        class="custom-image-btn"
+                    >
+                        Choose Image
+                    </label>
+
+                    <button
+                        id="removeCustomBackgroundBtn"
+                        class="remove-custom-image-btn"
+                        type="button"
+                    >
+                        Remove Image
+                    </button>
+
+                </div>
+
+                <input
+                    id="customBackgroundInput"
+                    type="file"
+                    accept="image/*"
+                    hidden
+                >
+
+                <p class="custom-background-help">
+                    Choose an image from your device. It will be stored
+                    locally on this device.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
