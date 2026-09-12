@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calculator-pwa-eh4b.onrender.com/sitemap.xml
