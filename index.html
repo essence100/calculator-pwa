@@ -1,0 +1,465 @@
+<head>
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Free Online Scientific Calculator | Calculator PWA</title>
+
+    <meta
+        name="description"
+        content="Use our free online scientific calculator for basic and advanced calculations. Fast, responsive, mobile-friendly and available offline as a PWA."
+    >
+
+    <meta
+        name="keywords"
+        content="calculator, online calculator, scientific calculator, free calculator, math calculator, mobile calculator, PWA calculator, offline calculator"
+    >
+
+    <meta name="author" content="Calculator PWA">
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="googlebot"
+        content="index, follow"
+    >
+
+
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://yourdomain.com/"
+    >
+
+
+    <!-- Theme / PWA -->
+    <meta
+        name="theme-color"
+        content="#0f1117"
+    >
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="Calculator"
+    >
+
+
+    <!-- PWA -->
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="icons/icon-192.png"
+        type="image/png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="icons/icon-192.png"
+    >
+
+
+    <!-- Open Graph / Social SEO -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Free Online Scientific Calculator"
+    >
+
+    <meta
+        property="og:description"
+        content="A fast, modern and responsive scientific calculator that works online and offline."
+    >
+
+    <meta
+        property="og:url"
+        content="https://yourdomain.com/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Calculator PWA"
+    >
+
+    <meta
+        property="og:image"
+        content="https://yourdomain.com/icons/icon-512.png"
+    >
+
+
+    <!-- Twitter / X -->
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Free Online Scientific Calculator"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Calculate quickly with our free online scientific calculator."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://yourdomain.com/icons/icon-512.png"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <!-- Header -->
+        <header class="calculator-header">
+            <h1>Calculator</h1>
+
+            <button
+                id="themeBtn"
+                class="theme-btn"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </header>
+
+
+        <!-- Display -->
+        <section class="display">
+
+            <div
+                id="historyDisplay"
+                class="history-display"
+            ></div>
+
+            <div
+                id="currentDisplay"
+                class="current-display"
+            >
+                0
+            </div>
+
+        </section>
+
+
+        <!-- Scientific Buttons -->
+        <section class="scientific-buttons">
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="sin"
+            >
+                sin
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="cos"
+            >
+                cos
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="tan"
+            >
+                tan
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="sqrt"
+            >
+                √
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="square"
+            >
+                x²
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="power"
+            >
+                xʸ
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="pi"
+            >
+                π
+            </button>
+
+            <button
+                class="btn scientific"
+                data-action="scientific"
+                data-value="inverse"
+            >
+                1/x
+            </button>
+
+        </section>
+
+
+        <!-- Main Calculator Buttons -->
+        <section class="buttons">
+
+            <button
+                class="btn function"
+                data-action="clear"
+            >
+                AC
+            </button>
+
+            <button
+                class="btn function delete-btn"
+                data-action="delete"
+            >
+                DEL
+            </button>
+
+            <button
+                class="btn function"
+                data-action="percentage"
+            >
+                %
+            </button>
+
+            <button
+                class="btn operator"
+                data-action="operator"
+                data-value="/"
+            >
+                ÷
+            </button>
+
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="7"
+            >
+                7
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="8"
+            >
+                8
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="9"
+            >
+                9
+            </button>
+
+            <button
+                class="btn operator"
+                data-action="operator"
+                data-value="*"
+            >
+                ×
+            </button>
+
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="4"
+            >
+                4
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="5"
+            >
+                5
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="6"
+            >
+                6
+            </button>
+
+            <button
+                class="btn operator"
+                data-action="operator"
+                data-value="-"
+            >
+                −
+            </button>
+
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="1"
+            >
+                1
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="2"
+            >
+                2
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="3"
+            >
+                3
+            </button>
+
+            <button
+                class="btn operator"
+                data-action="operator"
+                data-value="+"
+            >
+                +
+            </button>
+
+
+            <button
+                class="btn number zero"
+                data-action="number"
+                data-value="0"
+            >
+                0
+            </button>
+
+            <button
+                class="btn number"
+                data-action="number"
+                data-value="."
+            >
+                .
+            </button>
+
+            <button
+                class="btn equals"
+                data-action="equals"
+            >
+                =
+            </button>
+
+        </section>
+
+
+        <!-- History Button -->
+        <button
+            id="historyBtn"
+            class="history-toggle"
+            type="button"
+        >
+            HISTORY
+        </button>
+
+
+        <!-- History Panel -->
+        <section
+            id="historyPanel"
+            class="history-panel hidden"
+        >
+
+            <div class="history-header">
+
+                <h2>Calculation History</h2>
+
+                <button
+                    id="clearHistoryBtn"
+                    class="clear-history"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+            <div
+                id="historyList"
+                class="history-list"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
