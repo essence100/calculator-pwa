@@ -3,8 +3,7 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
 <meta
     name="viewport"
@@ -161,42 +160,35 @@
     rel="stylesheet"
     href="style.css"
 >
-```
+
 
 </head>
 
 <body>
 
-```
+
 <main class="calculator">
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header class="calculator-header">
-
         <h1>Calculator</h1>
 
         <button
             id="themeBtn"
             class="theme-btn"
             type="button"
-            aria-label="Switch calculator theme"
+            aria-label="Toggle theme"
         >
-            <i
-                class="fa-solid fa-sun"
-                aria-hidden="true"
-            ></i>
+            <i class="fa-solid fa-sun"></i>
         </button>
-
     </header>
 
 
-    <!-- DISPLAY -->
+    <!-- Display -->
     <section
         id="calculatorDisplay"
         class="display"
-        aria-label="Calculator display"
     >
-
         <div
             id="displayBackground"
             class="display-background"
@@ -209,321 +201,73 @@
         ></div>
 
         <div class="display-content">
-
             <div
                 id="historyDisplay"
                 class="history-display"
-                aria-label="Previous calculation"
             ></div>
 
             <div
                 id="currentDisplay"
                 class="current-display"
-                aria-label="Current calculator value"
             >
                 0
             </div>
-
         </div>
-
     </section>
 
 
-    <!-- SCIENTIFIC CALCULATOR -->
-    <section
-        class="scientific-buttons"
-        aria-label="Scientific calculator functions"
-    >
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="sin"
-            aria-label="Sine"
-        >
-            sin
-        </button>
+<!-- Scientific Buttons -->
+<section class="scientific-buttons" aria-label="Scientific calculator functions">
+    <button class="btn scientific" type="button" data-action="scientific" data-value="sin">sin</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="cos">cos</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="tan">tan</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="cos"
-            aria-label="Cosine"
-        >
-            cos
-        </button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="sqrt" aria-label="Square root">√</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="square" aria-label="Square">x²</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="power" aria-label="Power">xʸ</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="pi" aria-label="Pi">π</button>
+    <button class="btn scientific" type="button" data-action="scientific" data-value="inverse" aria-label="Reciprocal">1/x</button>
+</section>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="tan"
-            aria-label="Tangent"
-        >
-            tan
-        </button>
+<!-- Main Calculator Buttons -->
+<section class="buttons" aria-label="Calculator keypad">
+    <button class="btn function" type="button" data-action="clear">AC</button>
+    <button class="btn function delete-btn" type="button" data-action="delete" aria-label="Delete last character">DEL</button>
+    <button class="btn function" type="button" data-action="percentage" aria-label="Percentage">%</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="sqrt"
-            aria-label="Square root"
-        >
-            √
-        </button>
+    <button class="btn operator" type="button" data-action="operator" data-value="/" aria-label="Divide">÷</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="square"
-            aria-label="Square"
-        >
-            x²
-        </button>
+    <button class="btn number" type="button" data-action="number" data-value="7" aria-label="Seven">7</button>
+    <button class="btn number" type="button" data-action="number" data-value="8" aria-label="Eight">8</button>
+    <button class="btn number" type="button" data-action="number" data-value="9" aria-label="Nine">9</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="power"
-            aria-label="Power"
-        >
-            xʸ
-        </button>
+    <button class="btn operator" type="button" data-action="operator" data-value="*" aria-label="Multiply">×</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="pi"
-            aria-label="Pi"
-        >
-            π
-        </button>
+    <button class="btn number" type="button" data-action="number" data-value="4" aria-label="Four">4</button>
+    <button class="btn number" type="button" data-action="number" data-value="5" aria-label="Five">5</button>
+    <button class="btn number" type="button" data-action="number" data-value="6" aria-label="Six">6</button>
 
-        <button
-            class="btn scientific"
-            type="button"
-            data-action="scientific"
-            data-value="inverse"
-            aria-label="Inverse"
-        >
-            1/x
-        </button>
+    <button class="btn operator" type="button" data-action="operator" data-value="-" aria-label="Subtract">−</button>
 
-    </section>
+    <button class="btn number" type="button" data-action="number" data-value="1" aria-label="One">1</button>
+    <button class="btn number" type="button" data-action="number" data-value="2" aria-label="Two">2</button>
+    <button class="btn number" type="button" data-action="number" data-value="3" aria-label="Three">3</button>
+
+    <button class="btn operator" type="button" data-action="operator" data-value="+" aria-label="Add">+</button>
+
+    <button class="btn number zero" type="button" data-action="number" data-value="0" aria-label="Zero">0</button>
+    <button class="btn number" type="button" data-action="number" data-value="." aria-label="Decimal point">.</button>
+    <button class="btn equals" type="button" data-action="equals" aria-label="Calculate result">=</button>
+</section>
 
 
-    <!-- MAIN CALCULATOR BUTTONS -->
-    <section
-        class="buttons"
-        aria-label="Calculator keypad"
-    >
 
-        <button
-            class="btn function"
-            type="button"
-            data-action="clear"
-            aria-label="Clear calculator"
-        >
-            AC
-        </button>
-
-        <button
-            class="btn function delete-btn"
-            type="button"
-            data-action="delete"
-            aria-label="Delete last entry"
-        >
-            DEL
-        </button>
-
-        <button
-            class="btn function"
-            type="button"
-            data-action="percentage"
-            aria-label="Percentage"
-        >
-            %
-        </button>
-
-        <button
-            class="btn operator"
-            type="button"
-            data-action="operator"
-            data-value="/"
-            aria-label="Divide"
-        >
-            ÷
-        </button>
-
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="7"
-            aria-label="Seven"
-        >
-            7
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="8"
-            aria-label="Eight"
-        >
-            8
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="9"
-            aria-label="Nine"
-        >
-            9
-        </button>
-
-        <button
-            class="btn operator"
-            type="button"
-            data-action="operator"
-            data-value="*"
-            aria-label="Multiply"
-        >
-            ×
-        </button>
-
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="4"
-            aria-label="Four"
-        >
-            4
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="5"
-            aria-label="Five"
-        >
-            5
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="6"
-            aria-label="Six"
-        >
-            6
-        </button>
-
-        <button
-            class="btn operator"
-            type="button"
-            data-action="operator"
-            data-value="-"
-            aria-label="Subtract"
-        >
-            −
-        </button>
-
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="1"
-            aria-label="One"
-        >
-            1
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="2"
-            aria-label="Two"
-        >
-            2
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="3"
-            aria-label="Three"
-        >
-            3
-        </button>
-
-        <button
-            class="btn operator"
-            type="button"
-            data-action="operator"
-            data-value="+"
-            aria-label="Add"
-        >
-            +
-        </button>
-
-
-        <button
-            class="btn number zero"
-            type="button"
-            data-action="number"
-            data-value="0"
-            aria-label="Zero"
-        >
-            0
-        </button>
-
-        <button
-            class="btn number"
-            type="button"
-            data-action="number"
-            data-value="."
-            aria-label="Decimal point"
-        >
-            .
-        </button>
-
-        <button
-            class="btn equals"
-            type="button"
-            data-action="equals"
-            aria-label="Calculate result"
-        >
-            =
-        </button>
-
-    </section>
-
-
-    <!-- HISTORY -->
+    <!-- History -->
     <button
         id="historyBtn"
         class="history-toggle"
         type="button"
-        aria-label="Show or hide calculation history"
-        aria-controls="historyPanel"
     >
         HISTORY
     </button>
@@ -531,9 +275,7 @@
     <section
         id="historyPanel"
         class="history-panel hidden"
-        aria-label="Calculation history"
     >
-
         <div class="history-header">
 
             <h2>Calculation History</h2>
@@ -542,7 +284,6 @@
                 id="clearHistoryBtn"
                 class="clear-history"
                 type="button"
-                aria-label="Clear calculation history"
             >
                 Clear
             </button>
@@ -553,17 +294,14 @@
             id="historyList"
             class="history-list"
         ></div>
-
     </section>
 
 
-    <!-- DISPLAY BACKGROUND SETTINGS -->
+    <!-- Display Background Settings -->
     <button
         id="backgroundSettingsBtn"
         class="background-settings-toggle"
         type="button"
-        aria-label="Show or hide display background settings"
-        aria-controls="backgroundSettings"
     >
         DISPLAY BACKGROUND
     </button>
@@ -571,7 +309,6 @@
     <section
         id="backgroundSettings"
         class="background-settings hidden"
-        aria-label="Display background settings"
     >
 
         <div class="background-settings-header">
@@ -579,18 +316,15 @@
         </div>
 
 
-        <!-- BACKGROUND ON / OFF -->
+        <!-- Background On / Off -->
         <div class="setting-row">
 
-            <span id="backgroundStatusLabel">
-                Background
-            </span>
+            <span>Background</span>
 
             <button
                 id="backgroundToggle"
                 class="setting-switch active"
                 type="button"
-                aria-label="Turn display background on or off"
             >
                 ON
             </button>
@@ -598,21 +332,17 @@
         </div>
 
 
-        <!-- BACKGROUND STYLE -->
+        <!-- Background Style -->
         <div class="setting-group">
 
             <h3>Style</h3>
 
-            <div
-                class="background-options"
-                aria-label="Background style options"
-            >
+            <div class="background-options">
 
                 <button
                     class="background-option active"
                     data-background="abstract"
                     type="button"
-                    aria-label="Use abstract background"
                 >
                     Abstract
                 </button>
@@ -621,7 +351,6 @@
                     class="background-option"
                     data-background="technology"
                     type="button"
-                    aria-label="Use technology background"
                 >
                     Technology
                 </button>
@@ -630,7 +359,6 @@
                     class="background-option"
                     data-background="custom"
                     type="button"
-                    aria-label="Use custom background"
                 >
                     Custom
                 </button>
@@ -640,11 +368,11 @@
         </div>
 
 
-        <!-- OPACITY -->
+        <!-- Background Opacity -->
         <div class="setting-group">
 
             <label for="backgroundOpacity">
-                Background opacity
+                Opacity
             </label>
 
             <input
@@ -653,24 +381,20 @@
                 min="10"
                 max="40"
                 value="25"
-                aria-label="Background opacity"
             >
 
         </div>
 
 
-        <!-- ANIMATION -->
+        <!-- Background Animation -->
         <div class="setting-row">
 
-            <span id="animationStatusLabel">
-                Animation
-            </span>
+            <span>Animation</span>
 
             <button
                 id="backgroundAnimationToggle"
                 class="setting-switch active"
                 type="button"
-                aria-label="Turn background animation on or off"
             >
                 ON
             </button>
@@ -678,7 +402,7 @@
         </div>
 
 
-        <!-- CUSTOM IMAGE -->
+        <!-- Custom Image -->
         <div
             id="customBackgroundArea"
             class="custom-background-area hidden"
@@ -691,8 +415,6 @@
             <div
                 id="customBackgroundPreview"
                 class="custom-background-preview"
-                role="img"
-                aria-label="Custom background image preview"
             >
                 <span>No custom image selected</span>
             </div>
@@ -710,7 +432,6 @@
                     id="removeCustomBackgroundBtn"
                     class="remove-custom-image-btn"
                     type="button"
-                    aria-label="Remove custom background image"
                 >
                     Remove Image
                 </button>
@@ -721,7 +442,6 @@
                 id="customBackgroundInput"
                 type="file"
                 accept="image/*"
-                aria-label="Choose a custom background image"
                 hidden
             >
 
@@ -737,9 +457,11 @@
 </main>
 
 
-<!-- JAVASCRIPT -->
+<!-- JavaScript -->
 <script src="script.js"></script>
+
 
 </body>
 
 </html>
+
