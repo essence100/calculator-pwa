@@ -1,766 +1,745 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
 
-    <!-- Primary SEO -->
-    <title>Free Online Scientific Calculator | Calculator PWA</title>
+<!-- Primary SEO -->
+<title>Free Online Scientific Calculator | Calculator PWA</title>
 
-    <meta
-        name="description"
-        content="Free online scientific calculator built with HTML5, CSS3 and JavaScript. Works online and offline as an installable PWA. Developed by BENEDICT E, CHARLES, Web Developer from Tanzania."
-    >
+<meta
+    name="description"
+    content="Free online scientific calculator built with HTML5, CSS3 and JavaScript. Works online and offline as an installable PWA. Developed by BENEDICT E, CHARLES, Web Developer from Tanzania."
+>
 
-    <meta
-        name="keywords"
-        content="calculator, scientific calculator, online calculator, free calculator, offline calculator, PWA calculator"
-    >
+<meta
+    name="keywords"
+    content="calculator, scientific calculator, online calculator, free calculator, offline calculator, PWA calculator"
+>
 
-    <meta
-        name="author"
-        content="BENEDICT E, CHARLES"
-    >
+<meta
+    name="author"
+    content="BENEDICT E, CHARLES"
+>
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+<meta
+    name="robots"
+    content="index, follow"
+>
 
-    <meta
-        name="googlebot"
-        content="index, follow"
-    >
+<meta
+    name="googlebot"
+    content="index, follow"
+>
 
-    <meta
-        name="google-site-verification"
-        content="GSS5Vc6lYzWUt9jO2Ly6P3Q0wNACP8MRAABLmvD61V0"
-    >
+<meta
+    name="google-site-verification"
+    content="GSS5Vc6lYzWUt9jO2Ly6P3Q0wNACP8MRAABLmvD61V0"
+>
 
-    <!-- Canonical URL -->
-    <link
-        rel="canonical"
-        href="https://calculator-pwa-eh4b.onrender.com/"
-    >
+<!-- Canonical URL -->
+<link
+    rel="canonical"
+    href="https://calculator-pwa-eh4b.onrender.com/"
+>
 
-    <!-- Open Graph -->
-    <meta
-        property="og:type"
-        content="website"
-    >
+<!-- Open Graph -->
+<meta
+    property="og:type"
+    content="website"
+>
 
-    <meta
-        property="og:title"
-        content="Free Online Scientific Calculator | Calculator PWA"
-    >
+<meta
+    property="og:title"
+    content="Free Online Scientific Calculator | Calculator PWA"
+>
 
-    <meta
-        property="og:description"
-        content="A fast, free scientific calculator built with HTML5, CSS3 and JavaScript. Works online and offline and can be installed as a PWA."
-    >
+<meta
+    property="og:description"
+    content="A fast, free scientific calculator built with HTML5, CSS3 and JavaScript. Works online and offline and can be installed as a PWA."
+>
 
-    <meta
-        property="og:url"
-        content="https://calculator-pwa-eh4b.onrender.com/"
-    >
+<meta
+    property="og:url"
+    content="https://calculator-pwa-eh4b.onrender.com/"
+>
 
-    <meta
-        property="og:site_name"
-        content="Calculator PWA"
-    >
+<meta
+    property="og:site_name"
+    content="Calculator PWA"
+>
 
-    <meta
-        property="og:image"
-        content="https://calculator-pwa-eh4b.onrender.com/icons/icon-512.png"
-    >
+<meta
+    property="og:image"
+    content="https://calculator-pwa-eh4b.onrender.com/icons/icon-512.png"
+>
 
-    <!-- Twitter / X -->
-    <meta
-        name="twitter:card"
-        content="summary"
-    >
+<!-- Twitter / X -->
+<meta
+    name="twitter:card"
+    content="summary"
+>
 
-    <meta
-        name="twitter:title"
-        content="Free Online Scientific Calculator | Calculator PWA"
-    >
+<meta
+    name="twitter:title"
+    content="Free Online Scientific Calculator | Calculator PWA"
+>
 
-    <meta
-        name="twitter:description"
-        content="A fast, free scientific calculator that works online and offline as an installable PWA."
-    >
+<meta
+    name="twitter:description"
+    content="A fast, free scientific calculator that works online and offline as an installable PWA."
+>
 
-    <meta
-        name="twitter:image"
-        content="https://calculator-pwa-eh4b.onrender.com/icons/icon-512.png"
-    >
+<meta
+    name="twitter:image"
+    content="https://calculator-pwa-eh4b.onrender.com/icons/icon-512.png"
+>
 
-    <!-- PWA -->
-    <meta
-        name="theme-color"
-        content="#0f1117"
-    >
+<!-- PWA -->
+<meta
+    name="theme-color"
+    content="#0f1117"
+>
 
-    <meta
-        name="mobile-web-app-capable"
-        content="yes"
-    >
+<meta
+    name="mobile-web-app-capable"
+    content="yes"
+>
 
-    <meta
-        name="apple-mobile-web-app-capable"
-        content="yes"
-    >
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+>
 
-    <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent"
-    >
+<meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+>
 
-    <meta
-        name="apple-mobile-web-app-title"
-        content="Calculator"
-    >
+<meta
+    name="apple-mobile-web-app-title"
+    content="Calculator"
+>
 
-    <link
-        rel="manifest"
-        href="manifest.json"
-    >
+<link
+    rel="manifest"
+    href="manifest.json"
+>
 
-    <!-- Icons -->
-    <link
-        rel="icon"
-        href="icons/icon-192.png"
-        type="image/png"
-    >
+<!-- Icons -->
+<link
+    rel="icon"
+    href="icons/icon-192.png"
+    type="image/png"
+>
 
-    <link
-        rel="apple-touch-icon"
-        href="icons/icon-192.png"
-    >
+<link
+    rel="apple-touch-icon"
+    href="icons/icon-192.png"
+>
 
-    <!-- Font Awesome Local -->
-    <link
-        rel="stylesheet"
-        href="fontawesome/css/fontawesome.css"
-    >
+<!-- Font Awesome Local -->
+<link
+    rel="stylesheet"
+    href="fontawesome/css/fontawesome.css"
+>
 
-    <link
-        rel="stylesheet"
-        href="fontawesome/css/solid.css"
-    >
+<link
+    rel="stylesheet"
+    href="fontawesome/css/solid.css"
+>
 
-    <!-- Main CSS -->
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<!-- Main CSS -->
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+```
 
 </head>
 
 <body>
 
-    <main class="calculator">
+```
+<main class="calculator">
 
-        <!-- ========================================
-             HEADER
-        ========================================= -->
+    <!-- HEADER -->
+    <header class="calculator-header">
 
-        <header class="calculator-header">
+        <h1>Calculator</h1>
 
-            <h1>Calculator</h1>
-
-            <button
-                id="themeBtn"
-                class="theme-btn"
-                type="button"
-                aria-label="Toggle calculator theme"
-            >
-                <i
-                    class="fa-solid fa-sun"
-                    aria-hidden="true"
-                ></i>
-            </button>
-
-        </header>
-
-
-        <!-- ========================================
-             DISPLAY
-        ========================================= -->
-
-        <section
-            id="calculatorDisplay"
-            class="display"
-            aria-label="Calculator display"
+        <button
+            id="themeBtn"
+            class="theme-btn"
+            type="button"
+            aria-label="Switch calculator theme"
         >
+            <i
+                class="fa-solid fa-sun"
+                aria-hidden="true"
+            ></i>
+        </button>
+
+    </header>
+
+
+    <!-- DISPLAY -->
+    <section
+        id="calculatorDisplay"
+        class="display"
+        aria-label="Calculator display"
+    >
+
+        <div
+            id="displayBackground"
+            class="display-background"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="display-overlay"
+            aria-hidden="true"
+        ></div>
+
+        <div class="display-content">
 
             <div
-                id="displayBackground"
-                class="display-background"
-                aria-hidden="true"
+                id="historyDisplay"
+                class="history-display"
+                aria-label="Previous calculation"
             ></div>
 
             <div
-                class="display-overlay"
-                aria-hidden="true"
-            ></div>
-
-            <div class="display-content">
-
-                <div
-                    id="historyDisplay"
-                    class="history-display"
-                    aria-label="Previous calculation"
-                    aria-live="polite"
-                ></div>
-
-                <div
-                    id="currentDisplay"
-                    class="current-display"
-                    aria-label="Current calculator value"
-                    aria-live="polite"
-                >
-                    0
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
-             SCIENTIFIC BUTTONS
-        ========================================= -->
-
-        <section
-            class="scientific-buttons"
-            aria-label="Scientific calculator functions"
-        >
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="sin"
-                type="button"
-                aria-label="Sine"
-            >
-                sin
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="cos"
-                type="button"
-                aria-label="Cosine"
-            >
-                cos
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="tan"
-                type="button"
-                aria-label="Tangent"
-            >
-                tan
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="sqrt"
-                type="button"
-                aria-label="Square root"
-            >
-                √
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="square"
-                type="button"
-                aria-label="Square"
-            >
-                x²
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="power"
-                type="button"
-                aria-label="Power"
-            >
-                xʸ
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="pi"
-                type="button"
-                aria-label="Pi"
-            >
-                π
-            </button>
-
-            <button
-                class="btn scientific"
-                data-action="scientific"
-                data-value="inverse"
-                type="button"
-                aria-label="Reciprocal or one divided by x"
-            >
-                1/x
-            </button>
-
-        </section>
-
-
-        <!-- ========================================
-             MAIN CALCULATOR BUTTONS
-        ========================================= -->
-
-        <section
-            class="buttons"
-            aria-label="Calculator keypad"
-        >
-
-            <button
-                class="btn function"
-                data-action="clear"
-                type="button"
-                aria-label="Clear calculator"
-            >
-                AC
-            </button>
-
-            <button
-                class="btn function delete-btn"
-                data-action="delete"
-                type="button"
-                aria-label="Delete last character"
-            >
-                DEL
-            </button>
-
-            <button
-                class="btn function"
-                data-action="percentage"
-                type="button"
-                aria-label="Percentage"
-            >
-                %
-            </button>
-
-            <button
-                class="btn operator"
-                data-action="operator"
-                data-value="/"
-                type="button"
-                aria-label="Divide"
-            >
-                ÷
-            </button>
-
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="7"
-                type="button"
-                aria-label="Seven"
-            >
-                7
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="8"
-                type="button"
-                aria-label="Eight"
-            >
-                8
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="9"
-                type="button"
-                aria-label="Nine"
-            >
-                9
-            </button>
-
-            <button
-                class="btn operator"
-                data-action="operator"
-                data-value="*"
-                type="button"
-                aria-label="Multiply"
-            >
-                ×
-            </button>
-
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="4"
-                type="button"
-                aria-label="Four"
-            >
-                4
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="5"
-                type="button"
-                aria-label="Five"
-            >
-                5
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="6"
-                type="button"
-                aria-label="Six"
-            >
-                6
-            </button>
-
-            <button
-                class="btn operator"
-                data-action="operator"
-                data-value="-"
-                type="button"
-                aria-label="Subtract"
-            >
-                −
-            </button>
-
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="1"
-                type="button"
-                aria-label="One"
-            >
-                1
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="2"
-                type="button"
-                aria-label="Two"
-            >
-                2
-            </button>
-
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="3"
-                type="button"
-                aria-label="Three"
-            >
-                3
-            </button>
-
-            <button
-                class="btn operator"
-                data-action="operator"
-                data-value="+"
-                type="button"
-                aria-label="Add"
-            >
-                +
-            </button>
-
-
-            <button
-                class="btn number zero"
-                data-action="number"
-                data-value="0"
-                type="button"
-                aria-label="Zero"
+                id="currentDisplay"
+                class="current-display"
+                aria-label="Current calculator value"
             >
                 0
-            </button>
+            </div>
 
-            <button
-                class="btn number"
-                data-action="number"
-                data-value="."
-                type="button"
-                aria-label="Decimal point"
-            >
-                .
-            </button>
+        </div>
 
-            <button
-                class="btn equals"
-                data-action="equals"
-                type="button"
-                aria-label="Calculate result"
-            >
-                =
-            </button>
-
-        </section>
+    </section>
 
 
-        <!-- ========================================
-             HISTORY
-        ========================================= -->
+    <!-- SCIENTIFIC CALCULATOR -->
+    <section
+        class="scientific-buttons"
+        aria-label="Scientific calculator functions"
+    >
 
         <button
-            id="historyBtn"
-            class="history-toggle"
+            class="btn scientific"
             type="button"
-            aria-label="Show or hide calculation history"
+            data-action="scientific"
+            data-value="sin"
+            aria-label="Sine"
         >
-            HISTORY
+            sin
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="cos"
+            aria-label="Cosine"
+        >
+            cos
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="tan"
+            aria-label="Tangent"
+        >
+            tan
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="sqrt"
+            aria-label="Square root"
+        >
+            √
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="square"
+            aria-label="Square"
+        >
+            x²
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="power"
+            aria-label="Power"
+        >
+            xʸ
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="pi"
+            aria-label="Pi"
+        >
+            π
+        </button>
+
+        <button
+            class="btn scientific"
+            type="button"
+            data-action="scientific"
+            data-value="inverse"
+            aria-label="Inverse"
+        >
+            1/x
+        </button>
+
+    </section>
+
+
+    <!-- MAIN CALCULATOR BUTTONS -->
+    <section
+        class="buttons"
+        aria-label="Calculator keypad"
+    >
+
+        <button
+            class="btn function"
+            type="button"
+            data-action="clear"
+            aria-label="Clear calculator"
+        >
+            AC
+        </button>
+
+        <button
+            class="btn function delete-btn"
+            type="button"
+            data-action="delete"
+            aria-label="Delete last entry"
+        >
+            DEL
+        </button>
+
+        <button
+            class="btn function"
+            type="button"
+            data-action="percentage"
+            aria-label="Percentage"
+        >
+            %
+        </button>
+
+        <button
+            class="btn operator"
+            type="button"
+            data-action="operator"
+            data-value="/"
+            aria-label="Divide"
+        >
+            ÷
         </button>
 
 
-        <section
-            id="historyPanel"
-            class="history-panel hidden"
-            aria-label="Calculation history"
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="7"
+            aria-label="Seven"
         >
-
-            <div class="history-header">
-
-                <h2>Calculation History</h2>
-
-                <button
-                    id="clearHistoryBtn"
-                    class="clear-history"
-                    type="button"
-                    aria-label="Clear calculation history"
-                >
-                    Clear
-                </button>
-
-            </div>
-
-            <div
-                id="historyList"
-                class="history-list"
-                aria-live="polite"
-            ></div>
-
-        </section>
-
-
-        <!-- ========================================
-             DISPLAY BACKGROUND SETTINGS
-        ========================================= -->
+            7
+        </button>
 
         <button
-            id="backgroundSettingsBtn"
-            class="background-settings-toggle"
+            class="btn number"
             type="button"
-            aria-label="Show or hide display background settings"
+            data-action="number"
+            data-value="8"
+            aria-label="Eight"
         >
-            DISPLAY BACKGROUND
+            8
+        </button>
+
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="9"
+            aria-label="Nine"
+        >
+            9
+        </button>
+
+        <button
+            class="btn operator"
+            type="button"
+            data-action="operator"
+            data-value="*"
+            aria-label="Multiply"
+        >
+            ×
         </button>
 
 
-        <section
-            id="backgroundSettings"
-            class="background-settings hidden"
-            aria-label="Display background settings"
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="4"
+            aria-label="Four"
         >
+            4
+        </button>
 
-            <div class="background-settings-header">
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="5"
+            aria-label="Five"
+        >
+            5
+        </button>
 
-                <h2>Display Background</h2>
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="6"
+            aria-label="Six"
+        >
+            6
+        </button>
 
-            </div>
-
-
-            <!-- ON / OFF -->
-
-            <div class="setting-row">
-
-                <span>Background</span>
-
-                <button
-                    id="backgroundToggle"
-                    class="setting-switch active"
-                    type="button"
-                    aria-label="Toggle display background"
-                >
-                    ON
-                </button>
-
-            </div>
-
-
-            <!-- STYLE -->
-
-            <div class="setting-group">
-
-                <h3>Style</h3>
-
-                <div class="background-options">
-
-                    <button
-                        class="background-option active"
-                        data-background="abstract"
-                        type="button"
-                        aria-label="Use abstract background"
-                    >
-                        Abstract
-                    </button>
-
-                    <button
-                        class="background-option"
-                        data-background="technology"
-                        type="button"
-                        aria-label="Use technology background"
-                    >
-                        Technology
-                    </button>
-
-                    <button
-                        class="background-option"
-                        data-background="custom"
-                        type="button"
-                        aria-label="Use custom background"
-                    >
-                        Custom
-                    </button>
-
-                </div>
-
-            </div>
+        <button
+            class="btn operator"
+            type="button"
+            data-action="operator"
+            data-value="-"
+            aria-label="Subtract"
+        >
+            −
+        </button>
 
 
-            <!-- OPACITY -->
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="1"
+            aria-label="One"
+        >
+            1
+        </button>
 
-            <div class="setting-group">
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="2"
+            aria-label="Two"
+        >
+            2
+        </button>
 
-                <label for="backgroundOpacity">
-                    Opacity
-                </label>
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="3"
+            aria-label="Three"
+        >
+            3
+        </button>
 
-                <input
-                    id="backgroundOpacity"
-                    type="range"
-                    min="10"
-                    max="40"
-                    value="25"
-                    aria-label="Background opacity"
-                >
-
-            </div>
-
-
-            <!-- ANIMATION -->
-
-            <div class="setting-row">
-
-                <span>Animation</span>
-
-                <button
-                    id="backgroundAnimationToggle"
-                    class="setting-switch active"
-                    type="button"
-                    aria-label="Toggle background animation"
-                >
-                    ON
-                </button>
-
-            </div>
+        <button
+            class="btn operator"
+            type="button"
+            data-action="operator"
+            data-value="+"
+            aria-label="Add"
+        >
+            +
+        </button>
 
 
-            <!-- CUSTOM IMAGE -->
+        <button
+            class="btn number zero"
+            type="button"
+            data-action="number"
+            data-value="0"
+            aria-label="Zero"
+        >
+            0
+        </button>
+
+        <button
+            class="btn number"
+            type="button"
+            data-action="number"
+            data-value="."
+            aria-label="Decimal point"
+        >
+            .
+        </button>
+
+        <button
+            class="btn equals"
+            type="button"
+            data-action="equals"
+            aria-label="Calculate result"
+        >
+            =
+        </button>
+
+    </section>
+
+
+    <!-- HISTORY -->
+    <button
+        id="historyBtn"
+        class="history-toggle"
+        type="button"
+        aria-label="Show or hide calculation history"
+        aria-controls="historyPanel"
+    >
+        HISTORY
+    </button>
+
+    <section
+        id="historyPanel"
+        class="history-panel hidden"
+        aria-label="Calculation history"
+    >
+
+        <div class="history-header">
+
+            <h2>Calculation History</h2>
+
+            <button
+                id="clearHistoryBtn"
+                class="clear-history"
+                type="button"
+                aria-label="Clear calculation history"
+            >
+                Clear
+            </button>
+
+        </div>
+
+        <div
+            id="historyList"
+            class="history-list"
+        ></div>
+
+    </section>
+
+
+    <!-- DISPLAY BACKGROUND SETTINGS -->
+    <button
+        id="backgroundSettingsBtn"
+        class="background-settings-toggle"
+        type="button"
+        aria-label="Show or hide display background settings"
+        aria-controls="backgroundSettings"
+    >
+        DISPLAY BACKGROUND
+    </button>
+
+    <section
+        id="backgroundSettings"
+        class="background-settings hidden"
+        aria-label="Display background settings"
+    >
+
+        <div class="background-settings-header">
+            <h2>Display Background</h2>
+        </div>
+
+
+        <!-- BACKGROUND ON / OFF -->
+        <div class="setting-row">
+
+            <span id="backgroundStatusLabel">
+                Background
+            </span>
+
+            <button
+                id="backgroundToggle"
+                class="setting-switch active"
+                type="button"
+                aria-label="Turn display background on or off"
+            >
+                ON
+            </button>
+
+        </div>
+
+
+        <!-- BACKGROUND STYLE -->
+        <div class="setting-group">
+
+            <h3>Style</h3>
 
             <div
-                id="customBackgroundArea"
-                class="custom-background-area hidden"
+                class="background-options"
+                aria-label="Background style options"
             >
 
-                <label for="customBackgroundInput">
-                    Custom Image
-                </label>
-
-                <div
-                    id="customBackgroundPreview"
-                    class="custom-background-preview"
-                    aria-label="Custom background image preview"
+                <button
+                    class="background-option active"
+                    data-background="abstract"
+                    type="button"
+                    aria-label="Use abstract background"
                 >
-                    <span>No custom image selected</span>
-                </div>
+                    Abstract
+                </button>
 
-
-                <div class="custom-background-actions">
-
-                    <label
-                        for="customBackgroundInput"
-                        class="custom-image-btn"
-                    >
-                        Choose Image
-                    </label>
-
-                    <button
-                        id="removeCustomBackgroundBtn"
-                        class="remove-custom-image-btn"
-                        type="button"
-                        aria-label="Remove custom background image"
-                    >
-                        Remove Image
-                    </button>
-
-                </div>
-
-
-                <input
-                    id="customBackgroundInput"
-                    type="file"
-                    accept="image/*"
-                    hidden
-                    aria-label="Choose custom background image"
+                <button
+                    class="background-option"
+                    data-background="technology"
+                    type="button"
+                    aria-label="Use technology background"
                 >
+                    Technology
+                </button>
 
-
-                <p class="custom-background-help">
-                    Choose an image from your device. It will be stored
-                    locally on this device.
-                </p>
+                <button
+                    class="background-option"
+                    data-background="custom"
+                    type="button"
+                    aria-label="Use custom background"
+                >
+                    Custom
+                </button>
 
             </div>
 
-        </section>
-
-    </main>
+        </div>
 
 
-    <!-- ========================================
-         JAVASCRIPT
-    ========================================= -->
+        <!-- OPACITY -->
+        <div class="setting-group">
 
-    <script src="script.js"></script>
+            <label for="backgroundOpacity">
+                Background opacity
+            </label>
+
+            <input
+                id="backgroundOpacity"
+                type="range"
+                min="10"
+                max="40"
+                value="25"
+                aria-label="Background opacity"
+            >
+
+        </div>
+
+
+        <!-- ANIMATION -->
+        <div class="setting-row">
+
+            <span id="animationStatusLabel">
+                Animation
+            </span>
+
+            <button
+                id="backgroundAnimationToggle"
+                class="setting-switch active"
+                type="button"
+                aria-label="Turn background animation on or off"
+            >
+                ON
+            </button>
+
+        </div>
+
+
+        <!-- CUSTOM IMAGE -->
+        <div
+            id="customBackgroundArea"
+            class="custom-background-area hidden"
+        >
+
+            <label for="customBackgroundInput">
+                Custom Image
+            </label>
+
+            <div
+                id="customBackgroundPreview"
+                class="custom-background-preview"
+                role="img"
+                aria-label="Custom background image preview"
+            >
+                <span>No custom image selected</span>
+            </div>
+
+            <div class="custom-background-actions">
+
+                <label
+                    for="customBackgroundInput"
+                    class="custom-image-btn"
+                >
+                    Choose Image
+                </label>
+
+                <button
+                    id="removeCustomBackgroundBtn"
+                    class="remove-custom-image-btn"
+                    type="button"
+                    aria-label="Remove custom background image"
+                >
+                    Remove Image
+                </button>
+
+            </div>
+
+            <input
+                id="customBackgroundInput"
+                type="file"
+                accept="image/*"
+                aria-label="Choose a custom background image"
+                hidden
+            >
+
+            <p class="custom-background-help">
+                Choose an image from your device. It will be stored
+                locally on this device.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
 
 </body>
+
 </html>
