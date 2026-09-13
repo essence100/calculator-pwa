@@ -27,26 +27,26 @@
         content="BENEDICT E, CHARLES"
     >
 
-<meta
-    name="robots"
-    content="index, follow"
->
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-<meta
-    name="googlebot"
-    content="index, follow"
->
+    <meta
+        name="googlebot"
+        content="index, follow"
+    >
 
-<meta
-    name="google-site-verification"
-    content="GSS5Vc6lYzWUt9jO2Ly6P3Q0wNACP8MRAABLmvD61V0"
-/>
+    <meta
+        name="google-site-verification"
+        content="GSS5Vc6lYzWUt9jO2Ly6P3Q0wNACP8MRAABLmvD61V0"
+    >
 
-<!-- Canonical URL -->
-<link
-    rel="canonical"
-    href="https://calculator-pwa-eh4b.onrender.com/"
->
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://calculator-pwa-eh4b.onrender.com/"
+    >
 
     <!-- Open Graph -->
     <meta
@@ -162,7 +162,6 @@
 
 </head>
 
-
 <body>
 
     <main class="calculator">
@@ -179,9 +178,12 @@
                 id="themeBtn"
                 class="theme-btn"
                 type="button"
-                aria-label="Toggle theme"
+                aria-label="Toggle calculator theme"
             >
-                <i class="fa-solid fa-sun"></i>
+                <i
+                    class="fa-solid fa-sun"
+                    aria-hidden="true"
+                ></i>
             </button>
 
         </header>
@@ -194,6 +196,7 @@
         <section
             id="calculatorDisplay"
             class="display"
+            aria-label="Calculator display"
         >
 
             <div
@@ -212,11 +215,15 @@
                 <div
                     id="historyDisplay"
                     class="history-display"
+                    aria-label="Previous calculation"
+                    aria-live="polite"
                 ></div>
 
                 <div
                     id="currentDisplay"
                     class="current-display"
+                    aria-label="Current calculator value"
+                    aria-live="polite"
                 >
                     0
                 </div>
@@ -230,12 +237,17 @@
              SCIENTIFIC BUTTONS
         ========================================= -->
 
-        <section class="scientific-buttons">
+        <section
+            class="scientific-buttons"
+            aria-label="Scientific calculator functions"
+        >
 
             <button
                 class="btn scientific"
                 data-action="scientific"
                 data-value="sin"
+                type="button"
+                aria-label="Sine"
             >
                 sin
             </button>
@@ -244,6 +256,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="cos"
+                type="button"
+                aria-label="Cosine"
             >
                 cos
             </button>
@@ -252,6 +266,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="tan"
+                type="button"
+                aria-label="Tangent"
             >
                 tan
             </button>
@@ -260,6 +276,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="sqrt"
+                type="button"
+                aria-label="Square root"
             >
                 √
             </button>
@@ -268,6 +286,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="square"
+                type="button"
+                aria-label="Square"
             >
                 x²
             </button>
@@ -276,6 +296,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="power"
+                type="button"
+                aria-label="Power"
             >
                 xʸ
             </button>
@@ -284,6 +306,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="pi"
+                type="button"
+                aria-label="Pi"
             >
                 π
             </button>
@@ -292,6 +316,8 @@
                 class="btn scientific"
                 data-action="scientific"
                 data-value="inverse"
+                type="button"
+                aria-label="Reciprocal or one divided by x"
             >
                 1/x
             </button>
@@ -303,11 +329,16 @@
              MAIN CALCULATOR BUTTONS
         ========================================= -->
 
-        <section class="buttons">
+        <section
+            class="buttons"
+            aria-label="Calculator keypad"
+        >
 
             <button
                 class="btn function"
                 data-action="clear"
+                type="button"
+                aria-label="Clear calculator"
             >
                 AC
             </button>
@@ -315,6 +346,8 @@
             <button
                 class="btn function delete-btn"
                 data-action="delete"
+                type="button"
+                aria-label="Delete last character"
             >
                 DEL
             </button>
@@ -322,6 +355,8 @@
             <button
                 class="btn function"
                 data-action="percentage"
+                type="button"
+                aria-label="Percentage"
             >
                 %
             </button>
@@ -330,6 +365,8 @@
                 class="btn operator"
                 data-action="operator"
                 data-value="/"
+                type="button"
+                aria-label="Divide"
             >
                 ÷
             </button>
@@ -339,6 +376,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="7"
+                type="button"
+                aria-label="Seven"
             >
                 7
             </button>
@@ -347,6 +386,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="8"
+                type="button"
+                aria-label="Eight"
             >
                 8
             </button>
@@ -355,6 +396,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="9"
+                type="button"
+                aria-label="Nine"
             >
                 9
             </button>
@@ -363,6 +406,8 @@
                 class="btn operator"
                 data-action="operator"
                 data-value="*"
+                type="button"
+                aria-label="Multiply"
             >
                 ×
             </button>
@@ -372,6 +417,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="4"
+                type="button"
+                aria-label="Four"
             >
                 4
             </button>
@@ -380,6 +427,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="5"
+                type="button"
+                aria-label="Five"
             >
                 5
             </button>
@@ -388,6 +437,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="6"
+                type="button"
+                aria-label="Six"
             >
                 6
             </button>
@@ -396,6 +447,8 @@
                 class="btn operator"
                 data-action="operator"
                 data-value="-"
+                type="button"
+                aria-label="Subtract"
             >
                 −
             </button>
@@ -405,6 +458,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="1"
+                type="button"
+                aria-label="One"
             >
                 1
             </button>
@@ -413,6 +468,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="2"
+                type="button"
+                aria-label="Two"
             >
                 2
             </button>
@@ -421,6 +478,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="3"
+                type="button"
+                aria-label="Three"
             >
                 3
             </button>
@@ -429,6 +488,8 @@
                 class="btn operator"
                 data-action="operator"
                 data-value="+"
+                type="button"
+                aria-label="Add"
             >
                 +
             </button>
@@ -438,6 +499,8 @@
                 class="btn number zero"
                 data-action="number"
                 data-value="0"
+                type="button"
+                aria-label="Zero"
             >
                 0
             </button>
@@ -446,6 +509,8 @@
                 class="btn number"
                 data-action="number"
                 data-value="."
+                type="button"
+                aria-label="Decimal point"
             >
                 .
             </button>
@@ -453,6 +518,8 @@
             <button
                 class="btn equals"
                 data-action="equals"
+                type="button"
+                aria-label="Calculate result"
             >
                 =
             </button>
@@ -468,6 +535,7 @@
             id="historyBtn"
             class="history-toggle"
             type="button"
+            aria-label="Show or hide calculation history"
         >
             HISTORY
         </button>
@@ -476,6 +544,7 @@
         <section
             id="historyPanel"
             class="history-panel hidden"
+            aria-label="Calculation history"
         >
 
             <div class="history-header">
@@ -486,6 +555,7 @@
                     id="clearHistoryBtn"
                     class="clear-history"
                     type="button"
+                    aria-label="Clear calculation history"
                 >
                     Clear
                 </button>
@@ -495,6 +565,7 @@
             <div
                 id="historyList"
                 class="history-list"
+                aria-live="polite"
             ></div>
 
         </section>
@@ -508,6 +579,7 @@
             id="backgroundSettingsBtn"
             class="background-settings-toggle"
             type="button"
+            aria-label="Show or hide display background settings"
         >
             DISPLAY BACKGROUND
         </button>
@@ -516,6 +588,7 @@
         <section
             id="backgroundSettings"
             class="background-settings hidden"
+            aria-label="Display background settings"
         >
 
             <div class="background-settings-header">
@@ -535,6 +608,7 @@
                     id="backgroundToggle"
                     class="setting-switch active"
                     type="button"
+                    aria-label="Toggle display background"
                 >
                     ON
                 </button>
@@ -554,6 +628,7 @@
                         class="background-option active"
                         data-background="abstract"
                         type="button"
+                        aria-label="Use abstract background"
                     >
                         Abstract
                     </button>
@@ -562,6 +637,7 @@
                         class="background-option"
                         data-background="technology"
                         type="button"
+                        aria-label="Use technology background"
                     >
                         Technology
                     </button>
@@ -570,6 +646,7 @@
                         class="background-option"
                         data-background="custom"
                         type="button"
+                        aria-label="Use custom background"
                     >
                         Custom
                     </button>
@@ -593,6 +670,7 @@
                     min="10"
                     max="40"
                     value="25"
+                    aria-label="Background opacity"
                 >
 
             </div>
@@ -608,6 +686,7 @@
                     id="backgroundAnimationToggle"
                     class="setting-switch active"
                     type="button"
+                    aria-label="Toggle background animation"
                 >
                     ON
                 </button>
@@ -629,9 +708,11 @@
                 <div
                     id="customBackgroundPreview"
                     class="custom-background-preview"
+                    aria-label="Custom background image preview"
                 >
                     <span>No custom image selected</span>
                 </div>
+
 
                 <div class="custom-background-actions">
 
@@ -646,18 +727,22 @@
                         id="removeCustomBackgroundBtn"
                         class="remove-custom-image-btn"
                         type="button"
+                        aria-label="Remove custom background image"
                     >
                         Remove Image
                     </button>
 
                 </div>
 
+
                 <input
                     id="customBackgroundInput"
                     type="file"
                     accept="image/*"
                     hidden
+                    aria-label="Choose custom background image"
                 >
+
 
                 <p class="custom-background-help">
                     Choose an image from your device. It will be stored
@@ -678,5 +763,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
