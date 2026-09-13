@@ -156,13 +156,28 @@
 >
 
 <!-- Main CSS -->
-<link
-    rel="stylesheet"
-    href="style.css"
->
+<link rel="stylesheet"
+href="style.css">
 
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Calculator PWA",
+    "url": "https://calculator-pwa-eh4b.onrender.com/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "description": "A free online scientific calculator that works online and offline as an installable PWA.",
+    "author": {
+        "@type": "Person",
+        "name": "BENEDICT E, CHARLES"
+    }
+}
+</script>
 
 </head>
+
 
 <body>
 
@@ -454,14 +469,22 @@
 
     </section>
 
-</main>
+    <!-- Developer Attribution -->
+    <footer class="site-footer">
+        <p>Calculator PWA</p>
 
+        <p>
+            Developed by
+            <strong>BENEDICT E, CHARLES</strong>
+        </p>
+
+        <p>Web Developer • Tanzania</p>
+    </footer>
+
+</main>
 
 <!-- JavaScript -->
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
-
